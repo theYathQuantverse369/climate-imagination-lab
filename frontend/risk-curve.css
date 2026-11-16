@@ -1,0 +1,37 @@
+.risk-curve-card{background:var(--white);border:1px solid #e1e4da;margin-top:11px;padding:20px 20px 15px;min-width:0}
+.curve-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.curve-header h4{font:700 18px Manrope;letter-spacing:-.035em;margin:6px 0 4px;color:#293b31}
+.curve-subtitle{font-size:10px;color:#879084;margin:0}
+.investment-control{width:min(310px,42%);padding:11px 13px;background:#f4f5ef;border:1px solid #e5e7df;border-radius:3px}
+.investment-control label{display:flex;justify-content:space-between;align-items:center;font-size:8px;font-weight:700;letter-spacing:.08em;color:#68756a}
+.investment-control output{font:700 12px Manrope;letter-spacing:0;color:#557440;background:#e5edd9;padding:4px 7px;border-radius:2px}
+.investment-control input{appearance:none;width:100%;height:4px;margin:13px 0 8px;background:linear-gradient(90deg,#8ba76a,#b8ca8b);border-radius:8px;cursor:pointer}
+.investment-control input::-webkit-slider-thumb{appearance:none;width:15px;height:15px;border-radius:50%;background:#fff;border:2px solid #6e8c52;box-shadow:0 1px 4px #19271730}
+.investment-control input::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid #6e8c52;box-shadow:0 1px 4px #19271730}
+.investment-range{display:flex;justify-content:space-between;font-size:7px;color:#93998f}
+.investment-control>small{display:block;color:#858d81;font-size:8px;margin-top:8px}
+.risk-curve{width:100%;margin-top:13px;overflow-x:auto;overflow-y:hidden}
+.curve-svg{display:block;width:100%;height:auto;min-height:225px;overflow:visible;font-family:'DM Sans',sans-serif}
+.curve-svg .grid-line{stroke:#d9ddd5;stroke-width:1;opacity:.8}
+.curve-svg .vertical-grid{opacity:.42;stroke-dasharray:2 5}
+.curve-svg .threshold-line{stroke-dasharray:4 4;opacity:.95}
+.curve-svg .axis-line{stroke:#879286;stroke-width:1}
+.curve-svg .axis-tick{font-size:9px;fill:#747e74}
+.curve-svg .axis-title{font-size:8px;letter-spacing:1.2px;fill:#727e72;font-weight:700}
+.curve-svg .zone-label{font-size:8px;letter-spacing:.8px;font-weight:700;opacity:.83}
+.curve-svg .warming-reference{stroke:#46544c;stroke-width:1.4;stroke-dasharray:4 4;opacity:.85}
+.curve-svg .reference-tag{fill:#314238}
+.curve-svg .reference-label{fill:#fff;font-size:8px;font-weight:700;letter-spacing:.35px}
+.curve-svg .curve-series{transition:opacity .2s}
+.curve-legend{display:flex;flex-wrap:wrap;gap:7px 17px;margin:4px 0 0 38px}
+.curve-legend-item{display:inline-flex;align-items:center;gap:7px;border:0;background:transparent;color:#5c695e;padding:5px 2px;font-size:9px;cursor:pointer}
+.curve-legend-item i{width:18px;height:3px;background:var(--series-color);border-radius:4px;display:inline-block}
+.curve-legend-item:hover{color:#24362e}
+.curve-legend-item:focus-visible{outline:2px solid #809d5e;outline-offset:2px}
+.curve-legend-item.muted-line{opacity:.44;text-decoration:line-through}
+.curve-legend-item.muted-line i{background:#9da49a}
+.curve-note{display:flex;gap:7px;align-items:flex-start;border-top:1px solid #e8eae3;padding-top:10px;margin:8px 0 0;color:#828a80;font-size:8px;line-height:1.6}
+.curve-note span{font-size:12px;color:#81965e;line-height:1}
+@media(max-width:700px){.risk-curve-card{padding:16px 12px 13px}.curve-header{display:block}.curve-header h4{font-size:16px}.investment-control{width:100%;margin-top:13px}.curve-svg{min-width:640px;min-height:0}.curve-legend{margin-left:5px;gap:3px 10px}.curve-legend-item{font-size:8px}.curve-svg .axis-tick{font-size:8px}.curve-svg .zone-label{font-size:6px}.curve-svg .axis-title{font-size:7px}}
+@media print{.investment-control input{display:none}.risk-curve-card{break-inside:avoid}.curve-legend-item{color:#222}}
+

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: climate-imagination-lab
+    runtime: python
+    plan: free
+    buildCommand: "python -m compileall -q backend"
+    startCommand: "python backend/server.py"
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+

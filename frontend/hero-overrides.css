@@ -1,0 +1,63 @@
+/* Full-bleed photographic opening and expanded scenario controls. */
+.hero {
+  min-height: calc(100svh - 76px);
+  color: #fff;
+  padding: 80px max(calc((100vw - 1180px) / 2), 9%);
+  display: flex;
+  align-items: center;
+  background: #26302f url("assets/climate-coast-hero.jpg") center 55% / cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgba(9, 18, 19, .84), rgba(9, 18, 19, .62) 36%, rgba(9, 18, 19, .14) 76%), linear-gradient(0deg, rgba(7, 15, 16, .34), transparent 35%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  width: auto;
+  height: auto;
+  border: 1px solid #ffffff25;
+  border-radius: 0;
+  right: 18px;
+  top: 18px;
+  pointer-events: none;
+}
+.hero-copy { max-width: 650px; }
+.hero .eyebrow { color: #e0e8d4; }
+.hero .eyebrow > span { background: #e0e8d4; }
+.hero h1 { max-width: 720px; font-size: clamp(42px, 5.5vw, 74px); line-height: 1.08; margin: 25px 0 19px; }
+.hero h1 i { color: #e2ebd4; }
+.hero-copy > p { max-width: 510px; color: #f3f3ee; font-size: 15px; text-shadow: 0 1px 12px #0005; }
+.hero .book-note { color: #f1f1ec; text-shadow: 0 1px 10px #0008; }
+.hero .book-note i { color: #fff; }
+.hero .book-icon { color: #e0e8d4; }
+.hero-index { z-index: 2; right: 8%; bottom: 34px; color: #fff; display: grid; gap: 5px; text-align: right; }
+.hero-index span { color: #e0e5dc; font-size: 8px; }
+.hero-index b { font-size: 10px; }
+.photo-caption { position: absolute; bottom: 34px; left: 9%; z-index: 2; color: #f3f3ed; font-size: 8px; letter-spacing: .15em; text-shadow: 0 1px 8px #0008; }
+.control-hint { margin: -3px 0 7px; color: #858e82; font-size: 9px; line-height: 1.5; }
+.rainfall, .years { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.rainfall button, .years button { padding: 7px 1px; }
+.rainfall b { font-size: 8px; }
+.rainfall small { font-size: 7px; }
+.years button { font-size: 8px; }
+.control-label:has(+ .control-hint) { margin-bottom: 6px; }
+@media (max-width: 700px) {
+  .hero { min-height: calc(100svh - 62px); padding: 54px 24px 68px; background-position: 58% center; }
+  .hero::before { background: linear-gradient(90deg, rgba(9, 18, 19, .78), rgba(9, 18, 19, .48) 75%, rgba(9, 18, 19, .2)), linear-gradient(0deg, rgba(7, 15, 16, .5), transparent 48%); }
+  .hero::after { inset: 10px; right: 10px; top: 10px; }
+  .hero h1 { font-size: clamp(38px, 10vw, 52px); }
+  .hero-copy > p { font-size: 13px; }
+  .photo-caption { left: 24px; bottom: 22px; font-size: 7px; max-width: 65%; }
+  .hero-index { right: 24px; bottom: 22px; }
+}
+
