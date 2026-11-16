@@ -1,6 +1,4 @@
-# climate-imagination-lab
-
-An interactive classroom climate scenario explorer inspired by Amitav Ghosh’s *The Great Derangement*. Explore illustrative climate risks for Indian cities, compare warming and rainfall scenarios, and discuss adaptation choices. Educational demonstration only; not a forecast or measured risk assessment.
+# Climate Imagination Lab
 
 A complete, beginner-editable classroom demonstration inspired by Amitav Ghosh’s *The Great Derangement*. It contains a responsive frontend and a separate Python backend. The backend serves the website and provides the scenario API, so the same project can run locally or as one simple hosted service.
 
@@ -81,13 +79,6 @@ The included `render.yaml` configures one Python web service. No third-party pac
 
 Render’s free service availability and sleep behavior can change; check the current plan details in Render before relying on it for an event. For a classroom demonstration, run `start.bat` locally as a fallback.
 
-## Install on a phone
-
-After deployment over HTTPS, Chrome on Android can offer **Install app** from the browser menu (and this site shows an install button when Chrome exposes the install prompt). In Safari on iPhone, open **Share → Add to Home Screen**. The app shell, styling, scripts, and hero image are cached for later visits; scenario calculations continue using the built-in illustrative model when offline. Live API responses require a connection.
-
-The interface adapts to narrow screens, with controls that are easier to tap and charts that scale to the available width. Validate the published build on current iOS Safari and Android Chrome before using it in a live classroom; this package has not been device-tested on physical iOS or Android hardware.
-
 ## Accessibility and security basics
 
 The controls have labels, the risk cards expose accessible names, keyboard focus is available, and layouts adapt to mobile and print. The backend validates all scenario inputs, serves only files inside `frontend/`, and sends basic browser security headers. Fonts load from Google Fonts when online; the page remains usable if those fonts are unavailable.
-

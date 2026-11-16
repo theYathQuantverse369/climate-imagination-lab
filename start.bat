@@ -11,4 +11,3 @@ echo Keep the server window open while you use the website.
 start "Climate Lab Server" /D "%~dp0backend" cmd /k "set PORT=8010&&py -3 server.py"
 timeout /t 2 /nobreak >nul
 start "Climate Imagination Lab" http://localhost:8010
-
