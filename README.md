@@ -82,3 +82,7 @@ Render’s free service availability and sleep behavior can change; check the cu
 ## Accessibility and security basics
 
 The controls have labels, the risk cards expose accessible names, keyboard focus is available, and layouts adapt to mobile and print. The backend validates all scenario inputs, serves only files inside `frontend/`, and sends basic browser security headers. Fonts load from Google Fonts when online; the page remains usable if those fonts are unavailable.
+
+## Deploy on Vercel
+
+The root `vercel.json` selects Vercel’s **Other** preset, skips the build step, and serves the static site from `frontend/`. This is important because the homepage is `frontend/index.html`, rather than a root-level `index.html`. The Vercel deployment uses the browser’s built-in illustrative model; the Python `/api` backend is not deployed by this static configuration. Use the Render setup above when you need the Python API as well.
